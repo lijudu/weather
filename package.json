@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development"
+
+    "build-css": "tailwindcss build src/styles.css -o dist/styles.css"
   },
   "repository": {
     "type": "git",

@@ -10,7 +10,63 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <div class="text-5xl">Hellllllllo</div>
+        <input id="input" type="text" placeholder="Enter a location"
+        class="border-b-4 border-green-300 focus:outline-none absolute top-0 right-0">
+        <button id="farenheit"
+        class="absolute inset-y-5 right-0">Change to F</button>
+        <div id="current-container"
+        class="absolute inset-y-20 right-0">
+            <div id="icon-summary">pic of cloud here</div>
+            <div id="worded-summary">Cloudy</div>
+            <div id="city">Vancouver</div>
+            <div id="date-time">Wednesday Jan 18</div>
+            <div id="current-temp">10 deg cel</div>
+        </div>
+        <div id="week-container"
+        class="flex justify-around absolute inset-x-0 bottom-0">
+            <div id="day1" class="grow">
+                <div id="day-1">monday</div>
+                <div id="day-1-high">10deg cel</div>
+                <div id="day-1-low">7deg cel</div>
+                <div id="day-1-icon">cloudy</div>
+            </div>
+            <div id="day2" class="grow">
+                <div id="day-2">tuesday</div>
+                <div id="day-2-high">10deg cel</div>
+                <div id="day-2-low">7deg cel</div>
+                <div id="day-2-icon">cloudy</div>
+            </div>
+            <div id="day3" class="grow">
+                <div id="day-3">wednesday</div>
+                <div id="day-3-high">10deg cel</div>
+                <div id="day-3-low">7deg cel</div>
+                <div id="day-3-icon">cloudy</div>
+            </div>
+            <div id="day4" class="grow">
+                <div id="day-4">thursday</div>
+                <div id="day-4-high">10deg cel</div>
+                <div id="day-4-low">7deg cel</div>
+                <div id="day-4-icon">cloudy</div>
+            </div>
+            <div id="day-5" class="grow">
+                <div id="day-5">friday</div>
+                <div id="day-5-high">10deg cel</div>
+                <div id="day-5-low">7deg cel</div>
+                <div id="day-5-icon">cloudy</div>
+            </div>
+            <div id="day-6" class="grow">
+                <div id="day-6">saturday</div>
+                <div id="day-6-high">10deg cel</div>
+                <div id="day-6-low">7deg cel</div>
+                <div id="day-6-icon">cloudy</div>
+            </div>
+            <div id="day-7" class="grow">
+                <div id="day-7">sunday</div>
+                <div id="day-7-high">10deg cel</div>
+                <div id="day-7-low">7deg cel</div>
+                <div id="day-7-icon">cloudy</div>
+            </div>
+        </div>
         <script src="./main.js" async defer></script>
     </body>
 </html>
