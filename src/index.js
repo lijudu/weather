@@ -22,14 +22,14 @@ fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}}&limit=1&appid=df
 
     })
     .then(function(response){
-        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=df6a91bfdf395d8590174317cd545762`, {mode: 'cors'})
+        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=df6a91bfdf395d8590174317cd545762`, {mode: 'cors'})
             .then(res => res.json())
             .then(data => {
                 console.log(data)
 
-
+                // get weather icon
                 const icon = data.weather[0].icon
-
+                // 1) get local time 2) find local timeoffset 3)obtein UTC time 4) obtain city's offset in hours then   
                 const dateTime = new Date(data.dt * 1000);
                 const toUtc = dateTime.getTime() + dateTime.getTimezoneOffset() * 60000;
                 const currentLocalTime = toUtc + 1000 * data.timezone;
@@ -55,7 +55,7 @@ fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}}&limit=1&appid=df
                 $('#city').text(city)
                 $('#date').text(date + ' ' + year)
                 $('#time').text(hour)
-                $('#current-temp').text(Math.round((data.main.temp - 273.15)) + ' deg C' )
+                $('#current-temp').text(Math.round((data.main.temp)) + ' deg C' )
             })
             .catch(e => {
                 console.log(e)

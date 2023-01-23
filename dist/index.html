@@ -9,67 +9,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body>
-        <input id="input" type="text" placeholder="Enter a location"
-        class="border-b-4 border-green-300 focus:outline-none absolute top-0 right-0">
-        <button id="farenheit"
-        class="border-4 border-red-300">Change to F</button>
+    <body class="bg-clouds bg-cover bg-no-repeat">
         <div id="current-container"
-        class="absolute top-20 right-0">
-            <img id="icon-summary" src="" alt="icon-summary">
-            <div id="worded-summary"
-            class="capitalize"></div>
+        class="absolute top-40 right-0 text-right pr-10 text-3xl text-red-100">
+            <img id="icon-summary" src="" alt="icon-summary"
+            class="inline">
             <div id="city"
+            class="capitalize"></div>
+            <div id="worded-summary"
             class="capitalize"></div>
             <div id="date"></div>
             <div id="time"></div>
             <div id="current-temp"></div>
+            <button id="farenheit"
+            class="border-4 border-red-300">Change to F</button>
         </div>
-        <div id="week-container"
-        class="flex grow absolute inset-x-0 bottom-0">
-            <div id="day1" class="grow">
-                <div id="day-1">day-1</div>
-                <div id="day-1-high">day-1-high</div>
-                <div id="day-1-low">day-1-low</div>
-                <div id="day-1-icon">day-1-icon</div>
-            </div>
-            <div id="day2" class="grow">
-                <div id="day-2">tuesday</div>
-                <div id="day-2-high">10deg cel</div>
-                <div id="day-2-low">7deg cel</div>
-                <div id="day-2-icon">cloudy</div>
-            </div>
-            <div id="day3" class="grow">
-                <div id="day-3">wednesday</div>
-                <div id="day-3-high">10deg cel</div>
-                <div id="day-3-low">7deg cel</div>
-                <div id="day-3-icon">cloudy</div>
-            </div>
-            <div id="day4" class="grow">
-                <div id="day-4">thursday</div>
-                <div id="day-4-high">10deg cel</div>
-                <div id="day-4-low">7deg cel</div>
-                <div id="day-4-icon">cloudy</div>
-            </div>
-            <div id="day-5" class="grow">
-                <div id="day-5">friday</div>
-                <div id="day-5-high">10deg cel</div>
-                <div id="day-5-low">7deg cel</div>
-                <div id="day-5-icon">cloudy</div>
-            </div>
-            <div id="day-6" class="grow">
-                <div id="day-6">saturday</div>
-                <div id="day-6-high">10deg cel</div>
-                <div id="day-6-low">7deg cel</div>
-                <div id="day-6-icon">cloudy</div>
-            </div>
-            <div id="day-7" class="grow">
-                <div id="day-7">sunday</div>
-                <div id="day-7-high">10deg cel</div>
-                <div id="day-7-low">7deg cel</div>
-                <div id="day-7-icon">cloudy</div>
-            </div>
-        </div>
+        <input id="input" type="text" placeholder="Enter a location"
+        class="border-b-4 border-red-100 focus:outline-none absolute right-0 mr-10 text-2xl text-red-100 bg-transparent">
         <script src="./main.js" async defer></script>
     </body>
 </html>
