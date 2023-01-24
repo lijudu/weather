@@ -571,6 +571,11 @@ video {
   position: relative;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .top-20 {
   top: 5rem;
 }
@@ -581,6 +586,10 @@ video {
 
 .top-40 {
   top: 10rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .mr-10 {
@@ -597,6 +606,10 @@ video {
 
 .inline {
   display: inline;
+}
+
+.flex {
+  display: flex;
 }
 
 .table {
@@ -625,6 +638,14 @@ video {
 
 .resize {
   resize: both;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .truncate {
@@ -676,6 +697,14 @@ video {
   background-size: cover;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
 .bg-center {
   background-position: center;
 }
@@ -692,6 +721,10 @@ video {
   text-align: right;
 }
 
+.align-text-bottom {
+  vertical-align: text-bottom;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -700,6 +733,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .uppercase {
@@ -717,6 +755,11 @@ video {
 .text-red-100 {
   --tw-text-opacity: 1;
   color: rgb(254 226 226 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow {

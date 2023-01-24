@@ -9,23 +9,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body class="bg-clouds bg-cover bg-no-repeat">
+    <body class="bg-clouds bg-cover bg-fixed">
         <div id="current-container"
-        class="absolute top-40 right-0 text-right pr-10 text-3xl text-red-100">
+        class="absolute top-40 right-0 text-right pr-10 text-red-100">
             <img id="icon-summary" src="" alt="icon-summary"
             class="inline">
             <div id="city"
-            class="capitalize"></div>
+            class="capitalize text-3xl"></div>
             <div id="worded-summary"
-            class="capitalize"></div>
-            <div id="date"></div>
-            <div id="time"></div>
-            <div id="current-temp"></div>
+            class="capitalize text-2xl"></div>
+            <div id="date"
+            class="text-2xl"></div>
+            <div id="time"
+            class="text-2xl"></div>
+            <div id="current-temp"
+            class="text-2xl"></div>
             <button id="farenheit"
             class="border-4 border-red-300">Change to F</button>
         </div>
-        <input id="input" type="text" placeholder="Enter a location"
+        <input id="getCity" type="text" placeholder="Enter a location"
         class="border-b-4 border-red-100 focus:outline-none absolute right-0 mr-10 text-2xl text-red-100 bg-transparent">
+        <p class="text-red-100 text-sm flex justify-center absolute inset-x-0 bottom-0">Photo by &nbsp;<a href="https://unsplash.com/@marekpiwnicki?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Marek Piwnicki&nbsp;</a> on&nbsp; <a href="https://unsplash.com/photos/5jay5exvpuE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
         <script src="./main.js" async defer></script>
     </body>
 </html>
