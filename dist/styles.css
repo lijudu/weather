@@ -551,6 +551,10 @@ video {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .collapse {
   visibility: collapse;
 }
@@ -576,16 +580,12 @@ video {
   right: 0px;
 }
 
-.top-20 {
-  top: 5rem;
+.top-40 {
+  top: 10rem;
 }
 
 .right-0 {
   right: 0px;
-}
-
-.top-40 {
-  top: 10rem;
 }
 
 .bottom-0 {
@@ -640,10 +640,6 @@ video {
   resize: both;
 }
 
-.content-end {
-  align-content: flex-end;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -658,6 +654,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border-4 {
   border-width: 4px;
 }
@@ -670,14 +670,13 @@ video {
   border-bottom-width: 4px;
 }
 
+.border-double {
+  border-style: double;
+}
+
 .border-red-300 {
   --tw-border-opacity: 1;
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
-}
-
-.border-green-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(134 239 172 / var(--tw-border-opacity));
 }
 
 .border-red-100 {
@@ -689,6 +688,11 @@ video {
   background-color: transparent;
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .bg-clouds {
   background-image: url('../src/marek-piwnicki-5jay5exvpuE-unsplash.jpg');
 }
@@ -697,20 +701,24 @@ video {
   background-size: cover;
 }
 
-.bg-contain {
-  background-size: contain;
-}
-
 .bg-fixed {
   background-attachment: fixed;
 }
 
-.bg-center {
-  background-position: center;
+.p-56 {
+  padding: 14rem;
 }
 
-.bg-no-repeat {
-  background-repeat: no-repeat;
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .pr-10 {
@@ -721,13 +729,14 @@ video {
   text-align: right;
 }
 
-.align-text-bottom {
-  vertical-align: text-bottom;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-2xl {
@@ -738,6 +747,11 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .uppercase {
@@ -755,11 +769,6 @@ video {
 .text-red-100 {
   --tw-text-opacity: 1;
   color: rgb(254 226 226 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -789,6 +798,26 @@ video {
 
 .\!filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.hover\:border-red-600:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
+}
+
+.hover\:border-red-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.hover\:bg-red-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .focus\:outline-none:focus {

@@ -11596,11 +11596,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let city = ""
-let lat = ""
-let lon = ""
-
-
+let city = ''
+let lat = ''
+let lon = ''
 
 
 // input keypress event listener
@@ -11636,8 +11634,8 @@ const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${
                     const icon = data.weather[0].icon
                     // 1) get local time 2) find local timeoffset 3)obtein UTC time 4) obtain city's offset in hours then   
                     const dateTime = new Date(data.dt * 1000);
-                    const toUtc = dateTime.getTime() + dateTime.getTimezoneOffset() * 60000;
-                    const currentLocalTime = toUtc + 1000 * data.timezone;
+                    const toUtc = dateTime.getTime() + (dateTime.getTimezoneOffset() * 60000);
+                    const currentLocalTime = toUtc + (1000 * data.timezone);
                     const selectedDate = new Date(currentLocalTime);
                 
                     const date = selectedDate.toLocaleString("en-US", {
@@ -11651,16 +11649,31 @@ const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${
                     const hour = selectedDate.toLocaleString("en-GB", {
                         hour: "2-digit",
                         minute: "2-digit",
-                        hour12: false,
+                        hour12: true,
                     });
                 
 
                     jquery__WEBPACK_IMPORTED_MODULE_1___default()('#icon-summary').attr('src', `http://openweathermap.org/img/wn/${icon}@2x.png`)
                     jquery__WEBPACK_IMPORTED_MODULE_1___default()('#worded-summary').text(data.weather[0].description)
                     jquery__WEBPACK_IMPORTED_MODULE_1___default()('#city').text(city)
-                    jquery__WEBPACK_IMPORTED_MODULE_1___default()('#date').text(date + ' ' + year)
+                    jquery__WEBPACK_IMPORTED_MODULE_1___default()('#date').text(date + ', ' + year)
                     jquery__WEBPACK_IMPORTED_MODULE_1___default()('#time').text(hour)
                     jquery__WEBPACK_IMPORTED_MODULE_1___default()('#current-temp').text(Math.round((data.main.temp)) + ' deg C' )
+                    jquery__WEBPACK_IMPORTED_MODULE_1___default()('#farenheit').show()
+
+                    let cel = true 
+
+                    jquery__WEBPACK_IMPORTED_MODULE_1___default()('#farenheit').on('click', function(e) {
+                        if(cel == true) {
+                            jquery__WEBPACK_IMPORTED_MODULE_1___default()('#current-temp').text(Math.round((data.main.temp * 9 / 5) + 32) + ' deg F')
+                            jquery__WEBPACK_IMPORTED_MODULE_1___default()('#farenheit').text('Change to C')
+                            cel = false
+                        } else if (cel == false) {
+                            jquery__WEBPACK_IMPORTED_MODULE_1___default()('#current-temp').text(Math.round(data.main.temp) + ' deg C')
+                            jquery__WEBPACK_IMPORTED_MODULE_1___default()('#farenheit').text('Change to F')
+                            cel = true
+                        }
+                    })
                 })
                 .catch(e => {
                     console.log(e)
